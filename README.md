@@ -1,4 +1,4 @@
-# Shuhari
+# Typescript Node
 
 ## Simple but powerful node Typescript and testing
 
