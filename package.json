@@ -1,0 +1,20 @@
+{
+  "name": "shuhari",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "esr | node --test",
+    "start": "node -r esbuild-runner/register src/leet_/index.ts",
+    "fmt": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "Alex Jeffcott",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "esbuild-runner": "^2.2.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  }
+}
