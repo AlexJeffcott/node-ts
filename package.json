@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Minimal but powerful node Typescript and testing",
   "scripts": {
-    "test": "esr | node --test",
-    "start": "node -r esbuild-runner/register src/$npm_config_folder/index.ts",
+    "test": "node -r esbuild-runner/register --test src/$npm_config_target/$npm_config_target.test.ts",
+    "start": "node -r esbuild-runner/register src/$npm_config_target/index.ts",
     "fmt": "prettier --write ."
   },
   "keywords": [],
