@@ -13,6 +13,7 @@ pnpm init
 pnpm add -D esbuild esbuild-runner typescript @types/node prettier
 
 npm pkg set author="Alex Jeffcott"
+npm pkg set type="module"
 npm pkg set license="MIT"
 npm pkg set scripts.test="node -r esbuild-runner/register --test src/$npm_config_target/$npm_config_target.test.ts"
 npm pkg set scripts.start="node -r esbuild-runner/register src/$npm_config_target/index.ts"
@@ -23,10 +24,13 @@ npm pkg set engines.pnpm=">=7.5.X" && npm pkg set engines.node=">=18.4.X" && npm
 ### Running the project
 
 ```shell
-pnpm start --config.target=leet001 # run the index.ts file in the folder named 'leet001'.
-
-# INFO: You have to specify the test file path as node will not find ts files.
 # INFO: As pnpm disallows unknown args you cannot use the npm trick of passing an arbitrary arg, ARG and then accessing it in your script as $npm_config_ARG. This means you should use environment variables.
-# npm start --target=leet001 # run leet001.test.ts
-TARGET=leet001 pnpm start # run leet001.test.ts
+# npm start --config.target=leet001 # run the index.ts file in the folder named 'leet001'.
+TARGET=leet001 pnpm start --config.target=leet001 # run the index.ts file in the folder named 'leet001'.
+
+pnpm test # run tests
 ```
+
+## Further reading
+
+- [The sprintf annotation used by mocha-each](https://github.com/alexei/sprintf.js).
